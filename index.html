@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./script.js">
 </head>
 
 <body>
@@ -334,30 +335,36 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <form action="">
+                        <form action="" method="post" id="contactform" class="needs-validation" novalidate>
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                            <input type="hidden" name="redirect">
                             <div class="row g-3">
                                 <!-- NAME -->
                                 <div class="col-md-6">
-                                    <label>Your Name</label>
-                                    <input type="text" class="form-control">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <div class="invalid-feedback">Please provide your name</div>
                                 </div>
 
                                 <!-- EMAIL -->
                                 <div class="col-md-6">
-                                    <label>Your Email</label>
-                                    <input type="email" class="form-control">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Please provide a valid email</div>
                                 </div>
 
                                 <!-- SUBJECT -->
                                 <div class="col-12">
-                                    <label>Subject</label>
-                                    <input type="text" class="form-control">
+                                    <label for="Subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required>
+                                    <div class="invalid-feedback">Please provide a subject</div>
                                 </div>
 
                                 <!-- MESSAGE -->
                                 <div class="col-12">
-                                    <label>Message</label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea type="text" class="form-control" rows="4" id="message" name="message" required></textarea>
+                                    <div class="invalid-feedback">Please provide a message</div>
                                     <button class="btn btn-primary mt-3" style="width: 150px; height: 35px;">Send
                                         Message</button>
                                 </div>
@@ -370,6 +377,7 @@
             </div>
 
         </section>
+        
 
 
 
@@ -399,6 +407,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+        <script src="./script.js"></script>
 </body>
 
 </html>
